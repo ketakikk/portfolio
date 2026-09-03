@@ -1,0 +1,28 @@
+<section class="section achievements" id="achievements">
+  <span class="section__eyebrow">// recognition</span>
+  <h2 class="section__title">Marks left along the way.</h2>
+
+  <div class="achievements__layout">
+    <ul class="achievements__list">
+      @for (item of achievements; track item.id) {
+        <li class="achievements__item">
+          <span class="achievements__mark" aria-hidden="true">&#9670;</span>
+          <p>{{ item.text }}</p>
+        </li>
+      }
+    </ul>
+
+    <div class="achievements__education">
+      <h3 class="achievements__education-title mono">Education</h3>
+      @for (edu of education; track edu.id) {
+        <div class="achievements__edu-row">
+          <span class="mono">{{ edu.year }}</span>
+          <div>
+            <p class="achievements__edu-degree">{{ edu.degree }} &middot; {{ edu.institution }}</p>
+            <p class="achievements__edu-detail">{{ edu.detail }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

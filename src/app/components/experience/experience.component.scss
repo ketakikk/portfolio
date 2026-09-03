@@ -1,0 +1,132 @@
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.timeline__item {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 24px;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.timeline__rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.timeline__index {
+  font-size: 0.78rem;
+  color: var(--text-faint);
+}
+
+.timeline__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--line);
+  border: 1px solid var(--text-faint);
+}
+
+.timeline__dot--current {
+  background: var(--accent-blue);
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 4px rgba(79, 143, 232, 0.18);
+}
+
+.timeline__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+
+.timeline__role {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.timeline__badge {
+  font-size: 0.66rem;
+  color: var(--accent-amber);
+  border: 1px solid var(--accent-amber);
+  border-radius: 999px;
+  padding: 2px 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.timeline__company {
+  font-size: 0.94rem;
+  color: var(--accent-blue);
+}
+
+.timeline__duration {
+  font-size: 0.78rem;
+  color: var(--text-faint);
+  white-space: nowrap;
+  padding-top: 4px;
+}
+
+.timeline__clients {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 12px 0 16px;
+}
+
+.timeline__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.timeline__tech {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-sm);
+  padding: 5px 10px;
+}
+
+.timeline__bullets {
+  margin-top: 18px;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.timeline__bullets li {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  list-style: disc;
+}
+
+.timeline__bullets li::marker {
+  color: var(--accent-blue);
+}
+
+@media (max-width: 640px) {
+  .timeline__item {
+    grid-template-columns: 32px 1fr;
+  }
+  .timeline__header {
+    flex-direction: column;
+  }
+}

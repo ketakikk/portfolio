@@ -1,0 +1,52 @@
+{
+  "hash": "fcee1750",
+  "configHash": "ea69f7bb",
+  "lockfileHash": "23180ef0",
+  "browserHash": "8bb17ca0",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "6dffdcd5",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "954fdc69",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "d2ce18e7",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "20ebd279",
+      "needsInterop": false
+    },
+    "three": {
+      "src": "../../../../../../node_modules/three/build/three.module.js",
+      "file": "three.js",
+      "fileHash": "b15e8dfa",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "common-CR6iz3V7": {
+      "file": "common-CR6iz3V7.js",
+      "isDynamicEntry": false
+    },
+    "core-Bo2E9ccG": {
+      "file": "core-Bo2E9ccG.js",
+      "isDynamicEntry": false
+    },
+    "platform-browser-CHbWihDS": {
+      "file": "platform-browser-CHbWihDS.js",
+      "isDynamicEntry": false
+    }
+  }
+}

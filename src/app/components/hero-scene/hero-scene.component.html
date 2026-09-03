@@ -1,0 +1,41 @@
+<section class="hero" id="hero">
+  <div
+    class="hero__canvas"
+    #canvasHost
+    (pointermove)="onPointerMove($event)"
+    (pointerleave)="onPointerLeave()"
+  ></div>
+
+  <div class="hero__grid" aria-hidden="true"></div>
+
+  <div class="hero__content">
+    <p class="hero__eyebrow">// senior angular developer &middot; 8+ years</p>
+    <h1 class="hero__title">
+      Ketaki Kadam builds<br />
+      the architecture <span class="accent">enterprises run on.</span>
+    </h1>
+    <p class="hero__tagline">
+      Micro-frontends, reactive state and signal-driven UI for banking, telecom &amp; energy
+      platforms — Citi, AT&amp;T, Reliance Industries.
+    </p>
+
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#experience">View experience</a>
+      <a class="btn btn--ghost" href="#contact">Get in touch</a>
+    </div>
+
+    <p class="hero__hint">Drag your cursor across the constellation — it's her stack, mapped.</p>
+  </div>
+
+  <div class="hero__node-info" [class.hero__node-info--visible]="hoveredNode()">
+    @if (hoveredNode(); as node) {
+      <span class="hero__node-cluster">{{ node.cluster }}</span>
+      <span class="hero__node-label">{{ node.label }}</span>
+      <span class="hero__node-sub">{{ node.sublabel }}</span>
+    }
+  </div>
+
+  <div class="hero__scroll-cue" aria-hidden="true">
+    <span></span>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+<section class="section contact" id="contact">
+  <span class="section__eyebrow">// get in touch</span>
+  <h2 class="contact__title">
+    Building something that needs<br /><span class="accent">enterprise-grade Angular?</span>
+  </h2>
+
+  <div class="contact__grid">
+    <a class="contact__card" [href]="'mailto:' + contact.email">
+      <span class="contact__card-label mono">Email</span>
+      <span class="contact__card-value">{{ contact.email }}</span>
+    </a>
+    <a class="contact__card" [href]="'tel:' + contact.phone">
+      <span class="contact__card-label mono">Phone</span>
+      <span class="contact__card-value">{{ contact.phone }}</span>
+    </a>
+    <a class="contact__card" [href]="'https://' + contact.linkedin" target="_blank" rel="noopener">
+      <span class="contact__card-label mono">LinkedIn</span>
+      <span class="contact__card-value">{{ contact.linkedin }}</span>
+    </a>
+    <div class="contact__card contact__card--static">
+      <span class="contact__card-label mono">Based in</span>
+      <span class="contact__card-value">{{ contact.location }}</span>
+    </div>
+  </div>
+
+  <footer class="contact__footer">
+    <span class="mono">&#169; {{ year }} {{ contact.name }}</span>
+    <span class="mono">Built with Angular Signals &amp; Three.js</span>
+  </footer>
+</section>

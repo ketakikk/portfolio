@@ -1,0 +1,50 @@
+<section class="section experience" id="experience">
+  <span class="section__eyebrow">// career timeline</span>
+  <h2 class="section__title">Four companies. One throughline: Angular at scale.</h2>
+  <p class="section__intro">
+    A real sequence, ordered — each role built directly on the last, from dual-view banking
+    UIs to independently deployed micro-frontends.
+  </p>
+
+  <ol class="timeline">
+    @for (entry of entries; track entry.id; let i = $index) {
+      <li class="timeline__item" [class.timeline__item--open]="expandedId() === entry.id">
+        <div class="timeline__rail">
+          <span class="timeline__index mono">{{ (i + 1).toString().padStart(2, '0') }}</span>
+          <span class="timeline__dot" [class.timeline__dot--current]="entry.current"></span>
+        </div>
+
+        <div class="timeline__body">
+          <button class="timeline__header" (click)="toggle(entry.id)">
+            <div>
+              <h3 class="timeline__role">
+                {{ entry.role }}
+                @if (entry.current) {
+                  <span class="timeline__badge mono">current</span>
+                }
+              </h3>
+              <p class="timeline__company">{{ entry.company }}</p>
+            </div>
+            <span class="timeline__duration mono">{{ entry.duration }}</span>
+          </button>
+
+          <p class="timeline__clients">{{ entry.clients }} &middot; {{ entry.domain }}</p>
+
+          <ul class="timeline__stack">
+            @for (tech of entry.stack; track tech) {
+              <li class="timeline__tech mono">{{ tech }}</li>
+            }
+          </ul>
+
+          @if (expandedId() === entry.id) {
+            <ul class="timeline__bullets">
+              @for (bullet of entry.bullets; track bullet) {
+                <li>{{ bullet }}</li>
+              }
+            </ul>
+          }
+        </div>
+      </li>
+    }
+  </ol>
+</section>

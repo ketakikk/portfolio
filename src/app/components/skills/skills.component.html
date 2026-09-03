@@ -1,0 +1,33 @@
+<section class="section skills" id="skills">
+  <span class="section__eyebrow">// skill matrix</span>
+  <h2 class="section__title">Full delivery-chain fluency.</h2>
+  <p class="section__intro">
+    Frontend architecture through to deployment pipeline — the stack Ketaki has actually
+    shipped in production, not a wishlist.
+  </p>
+
+  <div class="skills__tabs" role="tablist">
+    @for (cat of categories; track cat.id) {
+      <button
+        class="skills__tab"
+        role="tab"
+        [class.skills__tab--active]="activeCategory() === cat.id"
+        (click)="select(cat.id)"
+      >
+        {{ cat.label }}
+      </button>
+    }
+  </div>
+
+  <div class="skills__panel">
+    @for (cat of categories; track cat.id) {
+      @if (activeCategory() === cat.id) {
+        <ul class="skills__chips">
+          @for (item of cat.items; track item) {
+            <li class="skills__chip mono">{{ item }}</li>
+          }
+        </ul>
+      }
+    }
+  </div>
+</section>

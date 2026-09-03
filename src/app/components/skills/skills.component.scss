@@ -1,0 +1,52 @@
+.skills__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.skills__tab {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.skills__tab:hover {
+  color: var(--text-primary);
+  border-color: var(--accent-blue-dim);
+}
+
+.skills__tab--active {
+  color: #060a0f;
+  background: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+
+.skills__panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  background: var(--bg-surface);
+  min-height: 140px;
+}
+
+.skills__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills__chip {
+  font-size: 0.82rem;
+  padding: 9px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line-soft);
+  color: var(--text-primary);
+  background: var(--bg-surface-raised);
+}

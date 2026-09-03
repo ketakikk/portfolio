@@ -1,0 +1,27 @@
+<section class="section about" id="about">
+  <span class="section__eyebrow">// about</span>
+  <div class="about__layout">
+    <div class="about__copy">
+      <h2 class="section__title">Enterprise-grade frontend, built to outlast the next redesign.</h2>
+      <p class="about__lead">
+        {{ contact.tagline }}
+      </p>
+      <p class="about__body">
+        Ketaki specialises in Micro-Frontend architecture on Angular — most recently three
+        independently deployed MFEs on Citi's Olympus platform. Her work spans the full delivery
+        chain: RxJS-driven state, NestJS microservices, Jest coverage, SonarQube gates and
+        Harness/Azure CI-CD — with a track record of leading PR reviews and mentoring across
+        cross-functional teams of 10+.
+      </p>
+    </div>
+
+    <dl class="about__stats">
+      @for (stat of stats; track stat.label) {
+        <div class="about__stat">
+          <dt class="about__stat-value mono">{{ stat.value }}</dt>
+          <dd class="about__stat-label">{{ stat.label }}</dd>
+        </div>
+      }
+    </dl>
+  </div>
+</section>
